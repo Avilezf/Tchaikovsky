@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./assets/css/styles.css" rel="stylesheet">
+    <link href="./assets/css/normalize.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Tchaikovsky</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="brand text-center text-2xl flex flex-row">
+            <h1 id="title">Tchaikovsky </h1>
+            <h1>Чайковский </h1>
+        </div>
+        <div class="text">
+            <p class="text-center">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla velit nisi nemo, sunt dignissimos soluta
+                voluptates minima perspiciatis adipisci doloribus quasi, possimus veritatis exercitationem dicta
+                laborum? Est fugiat expedita molestiae.
+            </p>
+            <br>
+            <hr>
+            <!---------------------------------->
+            <br>
+            <a id="join" href="#join-us">Join Us</a>
+        </div>
+
+        <div class="portrait">
+
+
+        </div>
+
+        <div class="paging">
+            <div class="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
+                <div class="flex-1 flex justify-between sm:hidden">
+                    <a href="#"
+                        class="back relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
+                        Previous </a>
+                    <a href="#"
+                        class="next ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
+                        Next </a>
+                </div>
+                <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
+                    <div>
+                        <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
+                            <a href="#"
+                                class="back relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                                <span class="sr-only">Previous</span>
+                                <!-- Heroicon name: solid/chevron-left -->
+                                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                    fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                            <!-- Current: "z-10 bg-indigo-50 border-indigo-500 text-indigo-600", Default: "bg-white border-gray-300 text-gray-500 hover:bg-gray-50" -->
+                            <div class="numbers">
+                                <a href="#" aria-current="page"
+                                    class="z-10 bg-indigo-50 border-indigo-500 text-indigo-600 relative inline-flex items-center px-4 py-2 border text-sm font-medium">
+                                    1 </a>
+                            </div>
+
+                            <a href="#"
+                                class="next relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                                <span class="sr-only">Next</span>
+                                <!-- Heroicon name: solid/chevron-right -->
+                                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                    fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div id="join-us">
+            <form class="w-full max-w-lg" action="#" method="post" onsubmit="return false;" id="form_crear">
+                <div class="flex flex-wrap -mx-3 mb-6">
+                    <div class="w-full ">
+                        <label class="font-serif block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                            for="grid-first-name">
+                            Title
+                        </label>
+                        <input
+                            class="appearance-none block w-full text-gray-700 border-2 border-black p-2 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                            id="grid-first-name" type="text">
+                        <p class="font-serif text-red-600 text-xs" style="display: none;" id="title_error">The title is
+                            necessary</p>
+                    </div>
+
+                </div>
+                <div class="flex flex-wrap -mx-3 mb-6">
+                    <div class="w-full">
+                        <label class="font-serif block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+                            Description
+                        </label>
+                        <textarea class="form-control block w-full px-3 py-1.5 text-base font-normal 
+                        text-gray-700 bg-white bg-clip-padding border border-solid transition ease-in-out m-0 
+                        border-black border-2 focus:text-gray-700 focus:bg-white focus:border-black-600 
+                        focus:outline-none" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <p class="font-serif text-gray-600 text-xs italic">Is optional</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap -mx-3 mb-6">
+                    <div class="w-full">
+                        <label class="font-serif block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                            for="grid-password">
+                            URL
+                        </label>
+                        <input
+                            class="appearance-none block w-full text-gray-700 border-2 p-2 border-black px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                            id="grid-first-name" type="text">
+                            <p class="font-serif text-red-600 text-xs" style="display: none;" id="url_error">Please write an URL or choose a local file</p>
+                    </div>
+                </div>
+
+                <p>OR</p>
+
+                <div class="flex justify-center mt-8 img">
+                    <div class="max-w-2xl rounded-lg shadow-xl bg-gray-50 ">
+                        <div class="m-4">
+                            <label class="inline-block mb-2 text-gray-500">File Upload</label>
+                            <div class="flex items-center justify-center w-full">
+                                <label
+                                    class="flex flex-col w-full h-32 border-4 border-blue-200 border-dashed hover:bg-gray-100 hover:border-gray-300">
+                                    <div class="flex flex-col items-center justify-center pt-7">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="w-8 h-8 text-gray-400 group-hover:text-gray-600" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                                        </svg>
+                                        <p class="pt-1 text-sm tracking-wider text-gray-400 group-hover:text-gray-600">
+                                            Attach a file</p>
+                                    </div>
+                                    <input type="file" class="opacity-0" id="uploadFile" />
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="Post">
+                    <button class="bg-black hover:bg-black text-white font-bold py-2 px-4 rounded font-serif "
+                        id="submit" type="submit">
+                        Post
+                    </button>
+                </div>
+
+
+            </form>
+        </div>
+
+        <div class="arrow-down"></div>
+
+
+        <footer>
+
+        </footer>
+    </div>
+
+    <script src="/assets/js/script.js"></script>
+</body>
+
+</html>
