@@ -3,7 +3,11 @@
 This is an HTML/CSS/JS static page with tailwind. The idea of the template was to create a Model Agency in which you can join sending your photo in a black a white filter. 
 
 ## Preview
-
+![Alt text](./assets/img/pages/page1.png?raw=true "Page 1")
+![Alt text](./assets/img/pages/page2.png?raw=true "Page 2")
+![Alt text](./assets/img/pages/page4.png?raw=true "Page 3")
+![Alt text](./assets/img/pages/page5.png?raw=true "Form")
+![Alt text](./assets/img/pages/page6.png?raw=true "Tablet 1")
 
 ## Installation
 Just clone the repository and that's all.
