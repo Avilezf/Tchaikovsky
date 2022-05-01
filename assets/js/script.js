@@ -272,7 +272,7 @@ function template6(models) {
     return `
     <div class="flex flex-row">
         <div class="basis-1/2 container-portrait ">
-            <img src="${models[0].url}">
+            <img src=${models[0].url}>
             <div class="overlayes">
                 <h2 class="text-3xl text-black">${models[0].title}</h2>
                 <p>${models[0].description}</p>
@@ -363,27 +363,27 @@ function formModels() {
             inputs[0].style.borderColor = 'red';
             document.getElementById('title_error').style.display = 'block';
             return;
-        }else{
+        } else {
             inputs[0].style.borderColor = 'black';
             document.getElementById('title_error').style.display = 'none';
         }
 
         //URL
         if (inputs[1].value.trim() == "") {
-            if (document.getElementById("uploadFile").files.length === 0) {
+            if (document.getElementById("fileupload").files.length === 0) {
                 inputs[1].style.borderColor = 'red';
                 document.getElementById('url_error').style.display = 'block';
                 return;
-            }else{
+            } else {
                 //Upload File
-                
-
+                inputs[1].value = uploadFile();
+                document.getElementById("fileupload").value = '';
             }
-        }else{
+        } else {
             inputs[1].style.borderColor = 'black';
             document.getElementById('url_error').style.display = 'none';
         }
-
+        debugger;
         let title = inputs[0].value.trim();
         let description = textarea[0].value.trim();
         let url = inputs[1].value.trim();
@@ -503,3 +503,33 @@ function createPagination() {
         });
     }
 }
+
+function canvasSOPTest(url) {
+    // Same Origin Policy check
+    img.onload = function() {
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+        console.log('Painting image...');
+        ctx.drawImage(img, 0, 0);
+        console.log('Attempting to get image data');
+        try {
+            ctx.getImageData(0, 0, canvas.width, canvas.height);
+            console.log('Success! No errors');
+        } catch (e) {
+            console.log(e);
+        }
+    };
+    return url;
+}
+
+function uploadFile() {
+    return window.URL.createObjectURL(fileupload.files[0]);
+}
+
+document.querySelector(["input[type=file"]).addEventListener('mouseenter', () => {
+
+    if(document.querySelector("input[type=file").files.length > 0){
+        document.querySelector(".num").innerHTML(`<p style="font-family: arial;"> ${document.querySelector("input[type=file").files.length} Archivos </p>`);
+    }
+
+});
